@@ -1,3 +1,5 @@
+node {
+
 properties([
  pipelineTriggers([
   [$class: 'GenericTrigger',
@@ -15,4 +17,6 @@ stage("build") {
  sh '''
  echo Build
  '''
+}
+
 }
