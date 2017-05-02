@@ -11,3 +11,8 @@ properties([
  ])
 ])
 
+stage("build") {
+ sh '''
+ echo Build
+ '''
+}
