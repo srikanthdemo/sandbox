@@ -14,6 +14,7 @@ buildscript {
 apply plugin: net.researchgate.release.ReleasePlugin
 apply plugin: com.jfrog.bintray.gradle.BintrayPlugin
 apply plugin: 'maven-publish'
+apply plugin: 'maven'
 
 
 afterEvaluate { project ->
