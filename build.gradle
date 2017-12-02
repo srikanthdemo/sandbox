@@ -1,14 +1,15 @@
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
 apply plugin: 'eclipse'
 
+group = "se.bjurr.sandbox"
 
 apply from: 'release.gradle'
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
 
-group = "se.bjurr.sandbox"
 
 
 dependencies {
