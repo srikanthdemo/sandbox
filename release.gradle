@@ -1,4 +1,4 @@
-
+apply plugin: 'maven-publish'
 
 task sourcesJar(type: Jar, dependsOn: classes) {
  classifier = 'sources'
