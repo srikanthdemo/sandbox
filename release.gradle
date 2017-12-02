@@ -46,7 +46,7 @@ publishing {
    from components.java
    artifact sourcesJar
    artifact javadocJar
-   groupId rootProject.group
+   groupId "se.bjurr.violations"
    artifactId project.name
    version version
    pom.withXml {
