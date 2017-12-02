@@ -38,6 +38,8 @@ def pomConfig = {
  }
 }
 
+print "rel group is: \"${project.group}\""
+
 publishing {
  publications {
   MyPublication(MavenPublication) {
