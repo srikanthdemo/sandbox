@@ -2,9 +2,8 @@ apply plugin: 'maven'
 apply plugin: 'maven-publish'
 apply plugin: 'eclipse'
 
-afterEvaluate { project ->
- apply from: 'release.gradle'
-}
+
+apply from: 'release.gradle'
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
