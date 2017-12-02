@@ -38,7 +38,7 @@ def pomConfig = {
  }
 }
 
-print "rel group is: \"${project.group}\""
+print "rel group is: \"${rootProject.group}\""
 
 publishing {
  publications {
@@ -46,7 +46,7 @@ publishing {
    from components.java
    artifact sourcesJar
    artifact javadocJar
-   groupId project.group
+   groupId rootProject.group
    artifactId project.name
    version version
    pom.withXml {
