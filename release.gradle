@@ -1,4 +1,19 @@
-apply plugin: 'maven-publish'
+buildscript {
+ repositories {
+  jcenter()
+  maven {
+   url 'https://plugins.gradle.org/m2/'
+  }
+ }
+ dependencies {
+  classpath 'net.researchgate:gradle-release:2.6.0'
+  classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+ }
+}
+
+apply plugin: net.researchgate.release.ReleasePlugin
+apply plugin: com.jfrog.bintray.gradle.BintrayPlugin
+
 
 task sourcesJar(type: Jar, dependsOn: classes) {
  classifier = 'sources'
