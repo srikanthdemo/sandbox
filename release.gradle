@@ -46,7 +46,7 @@ publishing {
    from components.java
    artifact sourcesJar
    artifact javadocJar
-   groupId "se.bjurr.violations"
+   groupId project.group
    artifactId project.name
    version version
    pom.withXml {
@@ -65,7 +65,7 @@ bintray {
  user = System.getenv('BINTRAY_USER')
  key = System.getenv('BINTRAY_KEY')
  publications = ['MyPublication']
- publish = true
+ publish = false
  pkg {
   repo = 'tomasbjerre'
   name = project.name
@@ -82,7 +82,7 @@ bintray {
    released  = new Date()
    vcsTag = project.version
    gpg {
-    sign = true
+    sign = false
    }
   }
  }
