@@ -1,8 +1,3 @@
-apply plugin: 'java'
-apply plugin: 'eclipse'
-
-group = "se.bjurr.sandbox"
-
 buildscript {
  repositories {
   jcenter()
@@ -23,6 +18,11 @@ apply plugin: 'maven'
 afterEvaluate { project ->
  apply from: 'release.gradle'
 }
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+group = "se.bjurr.sandbox"
 
 
 dependencies {
