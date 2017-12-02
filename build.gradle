@@ -1,0 +1,11 @@
+afterEvaluate { project ->
+ apply from: 'release.gradle'
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+dependencies {
+ testCompile 'junit:junit:4.12'
+ testCompile 'org.assertj:assertj-core:2.3.0'
+}
