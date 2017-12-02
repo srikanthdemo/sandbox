@@ -46,7 +46,7 @@ publishing {
    from components.java
    artifact sourcesJar
    artifact javadocJar
-   groupId project.publish.groupId
+   groupId project.publish.group
    artifactId project.name
    version version
    pom.withXml {
