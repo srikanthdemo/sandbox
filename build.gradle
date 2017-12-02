@@ -1,3 +1,7 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+
 buildscript {
  repositories {
   jcenter()
@@ -15,14 +19,10 @@ apply plugin: net.researchgate.release.ReleasePlugin
 apply plugin: com.jfrog.bintray.gradle.BintrayPlugin
 apply plugin: 'maven'
 
-print "group is: \"${project.group}\""
-
 afterEvaluate { project ->
  apply from: 'release.gradle'
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
 
 dependencies {
  testCompile 'junit:junit:4.12'
