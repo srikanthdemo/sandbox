@@ -1,4 +1,4 @@
-apply plugin: 'maven-publish'
+
 
 task sourcesJar(type: Jar, dependsOn: classes) {
  classifier = 'sources'
@@ -46,7 +46,8 @@ publishing {
    from components.java
    artifact sourcesJar
    artifact javadocJar
-   artifactId project.publish.groupId
+   groupId project.publish.groupId
+   artifactId project.name
    version version
    pom.withXml {
     def root = asNode()
