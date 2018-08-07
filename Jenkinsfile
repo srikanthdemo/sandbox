@@ -7,8 +7,8 @@ pipeline {
       [key: 'repository', regexpFilter: '[^a-z_-]', value: '$.repository']
      ],
      causeString: 'Triggered on $ref',
-     regexpFilterExpression: 'generic $.ref',
-     regexpFilterText: '$repository refs/heads/' + BRANCH_NAME,
+     regexpFilterText: '$ref',
+     regexpFilterExpression: 'refs/heads/' + BRANCH_NAME
      printContributedVariables: true,
      printPostContent: true
     )
