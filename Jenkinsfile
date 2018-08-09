@@ -3,24 +3,25 @@ pipeline {
   triggers {
     GenericTrigger(
      genericVariables: [
-      [key: 'ref', value: '$.ref'],
-      [key: 'repository', regexpFilter: '[^a-z_-]', value: '$.repository']
+      [key: 'ref', value: '$.ref']
      ],
      causeString: 'Triggered on $ref',
+     regexpFilterExpression: '',
+     regexpFilterText: '',
+     
+     token: 'abc123',
+     
+     printContributedVariables: true,
+     printPostContent: true,
+    
      regexpFilterText: '$ref',
      regexpFilterExpression: 'refs/heads/' + BRANCH_NAME
-     printContributedVariables: true,
-     printPostContent: true
     )
   }
   stages {
-    stage('Test Generic Trigger') {
+    stage('Some step') {
       steps {
-        sh """
-          echo Variables from shell:
-          echo reference ${ref}
-          echo repository ${repository}
-        """
+        sh "echo $ref"
       }
     }
   }
