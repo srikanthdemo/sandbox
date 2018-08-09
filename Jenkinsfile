@@ -6,8 +6,6 @@ pipeline {
       [key: 'ref', value: '$.ref']
      ],
      causeString: 'Triggered on $ref',
-     regexpFilterExpression: '',
-     regexpFilterText: '',
      
      token: 'abc123',
      
