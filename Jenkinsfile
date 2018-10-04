@@ -1,7 +1,7 @@
 pipeline {
   agent any
-  //properties([pipelineTriggers([cron('* * * * *')])])
-  triggers { cron('* * * * *') }
+  options{([pipelineTriggers([cron('* * * * *')])])}
+  //triggers { cron('* * * * *') }
   /*
   triggers {
     GenericTrigger(
