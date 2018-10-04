@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  options([pipelineTriggers([cron('* * * * *')])])
+  //options([pipelineTriggers([cron('* * * * *')])])
   //triggers { cron('* * * * *') }
   /*
   triggers {
@@ -23,7 +23,7 @@ pipeline {
   stages {
     stage('Some step') {
       steps {
-        sh "echo $ref"
+        sh "echo Hello world"
       }
     }
   }
