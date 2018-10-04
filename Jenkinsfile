@@ -1,5 +1,7 @@
 pipeline {
   agent any
+  properties([pipelineTriggers([cron('* * * * *')])])
+  /*
   triggers {
     GenericTrigger(
      genericVariables: [
@@ -15,7 +17,8 @@ pipeline {
      regexpFilterText: '$ref',
      regexpFilterExpression: 'refs/heads/' + BRANCH_NAME
     )
-  }
+  } 
+  */
   stages {
     stage('Some step') {
       steps {
