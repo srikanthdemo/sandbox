@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  options{([pipelineTriggers([cron('* * * * *')])])}
+  options([pipelineTriggers([cron('* * * * *')])])
   //triggers { cron('* * * * *') }
   /*
   triggers {
